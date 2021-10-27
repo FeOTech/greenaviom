@@ -1,0 +1,700 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link {
+    /* border: 1px solid #090; */
+    border-radius: 4px;
+    padding: 4px;
+    margin: 2px;
+}
+
+.nav-link:hover {
+    /* background-color: rgba(0, 360, 0, 0.6); */
+    /* background-color: #000; */
+    border: 1px solid #0f0;
+    color: #0f0;
+}
+
+.nav_tag {
+    float: left;
+}
+
+.nav_tag_line1 {
+    margin: 0; 
+    color: #0f0; 
+    font-weight: 700;
+    letter-spacing: 10px;
+}
+
+.nav_tag_line2 {
+    margin: 0; 
+    color: #090; 
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+@media (max-width: 480px) {
+    .nav_tag {
+        display: none;
+    }
+}
+
+
+.card-deck {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.cards_tag {
+    margin: 30em 2vw 2vh 2vw;
+    padding: 1vh 0 1vh 0;
+    border-radius: 5px;
+    border: 4px solid;
+    background-color: #ffe67c;
+    text-align: center;
+    color: #295f2d;
+}
+
+
+@media (max-width: 768px) {
+    .cards_tag {
+        margin-top: 60em;
+    }
+}
+
+.card {
+    align-items: flex-end;
+    background-color: #4AE54A;
+    color: #fff;
+}
+
+.card:nth-child(2){
+    background-color: #30CB00;
+}
+
+.card:nth-child(3){
+    background-color: #0F9200;
+}
+
+.card:nth-child(4){
+    background-color: #006203;
+}
+
+
+.card-img {
+    height: 40px;
+    width: 60px;
+}
+
+
+
+/* FOR TREE */
+/* .tree {
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+}
+.tree ul {
+	padding-top: 20px; position: relative;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+} */
+
+/* .tree li {
+	float: left; text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px 5px 0 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+} */
+
+/*We will use ::before and ::after to draw the connectors*/
+
+/* .tree li::before, .tree li::after{
+	content: '';
+	position: absolute; top: 0; right: 50%;
+	border-top: 1px solid #ccc;
+	width: 50%; height: 20px;
+}
+.tree li::after{
+	right: auto; left: 50%;
+	border-left: 1px solid #ccc;
+} */
+
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+/* .tree li:only-child::after, .tree li:only-child::before {
+	display: none;
+} */
+
+/*Remove space from the top of single children*/
+/* .tree li:only-child{ padding-top: 0;} */
+
+/*Remove left connector from first child and 
+right connector from last child*/
+/* .tree li:first-child::before, .tree li:last-child::after{
+	border: 0 none;
+} */
+/*Adding back the vertical connector to the last nodes*/
+/* .tree li:last-child::before{
+	border-right: 1px solid #ccc;
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+} */
+
+/*Time to add downward connectors from parents*/
+/* .tree ul ul::before{
+	content: '';
+	position: absolute; top: 0; left: 50%;
+	border-left: 1px solid #ccc;
+	width: 0; height: 20px;
+} */
+
+/* .tree li a{
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #666;
+	font-family: arial, verdana, tahoma;
+	font-size: 2vh;
+	display: inline-block;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+} */
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+/* .tree li a:hover, .tree li a:hover+ul li a {
+	background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
+} */
+/*Connector styles on hover*/
+/* .tree li a:hover+ul li::after, 
+.tree li a:hover+ul li::before, 
+.tree li a:hover+ul::before, 
+.tree li a:hover+ul ul::before{
+	border-color:  #94a0b4;
+} */
+
+
+
+
+
+
+/* FOR CIRCULAR TREE */
+.wrapper {
+    padding: 1% 1%;
+}
+  
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 40%;
+    vertical-align: middle;
+    overflow: hidden;
+    background: #fff;
+}
+  
+.svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.wrapper_phone {
+    display: none;
+}
+
+@media (max-width:478px) {
+    .wrapper {
+        display: none;
+    }
+
+    .svg-container {
+        padding-bottom: 160%;
+    }
+
+    .wrapper_phone {
+        display: block;
+    }
+}
+
+
+
+/* FOR TREE CHART */
+.tree_chart_tag {
+    margin: 2vh 2vw 2vh 2vw;
+    padding: 1vh 0 1vh 0;
+    border-radius: 5px;
+    border: 4px solid;
+    background-color: #ffe67c;
+    text-align: center;
+    color: #295f2d;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.cf:before,.cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+* For IE 6/7 only
+* Include this rule to trigger hasLayout and contain floats.
+*/
+.cf {
+    *zoom: 1;
+}
+
+.tree_chart {
+    width: 100%;
+    max-width: 1142px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* a:focus {
+    outline: 2px dashed #f7f7f7;
+} */
+
+@media all and (max-width: 767px) {
+    .tree_chart {
+        padding: 0 20px;
+    }
+}
+
+.tree_chart_ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.tree_chart_ul a {
+    display: block;
+    background: #ccc;
+    border: 4px solid #000;
+    text-align: center;
+    overflow: hidden;
+    font-size: .7em;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    height: 70px;
+    margin-bottom: -26px;
+    box-shadow: 4px 4px 9px -4px rgba(0, 0, 0, 0.4);
+    -webkit-transition: all linear .1s;
+    -moz-transition: all linear .1s;
+    transition: all linear .1s;
+}
+
+
+@media all and (max-width: 767px) {
+    .tree_chart_ul a {
+        font-size: 1em;
+    }
+}
+
+
+.tree_chart_ul a span {
+    top: 50%;
+    margin-top: -0.7em;
+    display: block;
+}
+
+
+.administration>li>a {
+    margin-bottom: 25px;
+}
+
+.director>li>a {
+    width: 50%;
+    margin: 0 auto 0px auto;
+}
+
+.subdirector:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 130px;
+    background: red;
+    border-left: 4px solid #000;
+    left: 34.45%;
+    position: relative;
+}
+
+.subdirector,
+.departments {
+    position: absolute;
+    width: 100%;
+}
+
+.subdirector>li:first-child,
+.departments>li:first-child {
+    width: 18.59894921190893%;
+    height: 64px;
+    margin: 0 auto 92px auto;
+    padding-top: 25px;
+    /* border-bottom: 4px solid white; */
+    z-index: 1;
+}
+
+.subdirector>li:first-child {
+    float: right;
+    right: 27.2%;
+    border-left: 4px solid #000;
+    border-bottom: 4px solid #000;
+}
+
+.departments>li:first-child {
+    float: left;
+    left: 27.2%;
+    /* border-right: 4px solid white; */
+}
+
+.subdirector>li:first-child a,
+.departments>li:first-child a {
+    width: 100%;
+}
+
+.subdirector>li:first-child a {
+    left: 25px;
+}
+
+@media all and (max-width: 767px) {
+
+    .subdirector>li:first-child,
+    .departments>li:first-child {
+        width: 40%;
+    }
+
+    .subdirector>li:first-child {
+        right: 1%;
+        margin-right: 2px;
+    }
+
+    .subdirector:after {
+        left: 29.8%;
+    }
+
+    .departments>li:first-child {
+        left: 10%;
+        margin-left: 2px;
+    }
+}
+
+
+.departments>li:first-child a {
+    right: 25px;
+}
+
+.department:first-child,
+.departments li:nth-child(2) {
+    margin-left: 0;
+    clear: left;
+}
+
+.departments:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 81.1%;
+    height: 22px;
+    border-top: 4px solid #000;
+    border-right: 4px solid #000;
+    border-left: 4px solid #000;
+    margin: 0 auto;
+    top: 130px;
+    left: 11%
+}
+
+@media all and (max-width: 767px) {
+    .departments:after {
+        border-right: none;
+        left: 0;
+        width: 29.8%;
+    }
+}
+
+@media all and (min-width: 768px) {
+
+    .department:first-child:before,
+    .department:last-child:before {
+        border: none;
+    }
+}
+
+.department:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 22px;
+    border-left: 4px solid #000;
+    z-index: 1;
+    top: -22px;
+    left: 48%;
+    margin-left: -4px;
+}
+
+.department {
+    border-left: 4px solid #000;
+    width: 23.6%;
+    float: left;
+    margin-left: 1.751313485113835%;
+    margin-bottom: 60px;
+}
+
+.lt-ie8 .department {
+    width: 18.25%;
+}
+
+@media all and (max-width: 767px) {
+    .department {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .department:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 60px;
+        border-left: 4px solid #000;
+        z-index: 1;
+        top: -60px;
+        left: 0%;
+        margin-left: -4px;
+    }
+
+    .department:nth-child(2):before {
+        display: none;
+    }
+}
+
+.department>a {
+    margin: 0 0 -26px -4px;
+    z-index: 1;
+}
+
+.department>a:hover {
+    height: 80px;
+}
+
+.department>ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.department li {
+    padding-left: 25px;
+    border-bottom: 4px solid #000;
+    height: 80px;
+}
+
+.department li a {
+    background: #fff;
+    top: 48px;
+    position: absolute;
+    z-index: 1;
+    width: 90%;
+    height: 60px;
+    vertical-align: middle;
+    right: -1px;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background-image: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%) !important;
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(0, 0, 0, 0.25)), color-stop(100%, rgba(0, 0, 0, 0))) !important;
+    background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%) !important;
+    background-image: -o-linear-gradient(-45deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%) !important;
+    background-image: -ms-linear-gradient(-45deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%) !important;
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000', endColorstr='#00000000', GradientType=1);
+}
+
+.department li a:hover {
+    box-shadow: 8px 8px 9px -4px rgba(0, 0, 0, 0.1);
+    height: 80px;
+    width: 95%;
+    top: 39px;
+    background-image: none !important;
+}
+
+/* Department/ section colors */
+.department.dep-a a {
+    background: #FFD600;
+}
+
+.department.dep-b a {
+    background: #AAD4E7;
+}
+
+.department.dep-c a {
+    background: #FDB0FD;
+}
+
+.department.dep-d a {
+    background: #A3A2A2;
+}
+
+.department.dep-e a {
+    background: #f0f0f0;
+}
+
+.chart_top {
+    background-color: #ccc;
+}
+
+
+
+/* CONTACT US  */
+.item1 { 
+    grid-area: header;
+    text-align: center; 
+    font-size: 36px;
+    font-family: arial;
+    font-weight: 600;
+    margin-top: 2vh;
+}
+.item2 { 
+    margin-top: -25px;
+    grid-area: main; 
+    text-align: center;
+    font-size: 20px;
+    font-family: arial;
+}
+.item3 { 
+    margin-top: -25px;
+    grid-area: right; 
+    text-align: center;
+    font-size: 20px;
+    font-family: arial;
+    
+}
+
+.tagline{
+    grid-area: tag;
+    text-align: center;
+    font-family: cursive;
+    font-weight: 400;
+    font-size: 30px;
+    margin: 4vh 0 3vh 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'main main main right right right'
+    'tag tag tag tag tag tag';
+  grid-template-rows: 1fr 2fr; 
+  /* background-color: linear-gradient(#4cf34c,#003d00); */
+}
+
+  /* div { */
+  /* background-image: linear-gradient(); */
+  /* padding: 20px 0; */
+/* } */
+
+.box{
+    background-image: linear-gradient(#060,#000);
+    color: white;
+    margin-top: 2vh;
+}
+
+/* .tagline{
+    
+} */
+.super{
+    margin-top: 1px;
+    padding-left: 10px;
+    padding-top: 1vh;
+    height: 5vh;
+    background-color: rgb(0, 0, 0);
+    color: #080;
+    font-size: 2vh;
+    font-family: arial;
+    font-weight: 400;
+}
+
+.copyright{
+    text-align: left;
+}
+
+.designedby{
+    margin-right: 15px;
+    float: right;
+    
+}
+/* a{
+    text-decoration: none;
+} */
+
+
+/* Media Query Phone */
+
+@media screen and (min-width: 360px) and (max-width: 640px){
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+          'header header header header header header'
+          'main main main main main main'
+          'right right right right right right'
+          'tag tag tag tag tag tag';
+        grid-template-rows: 1fr 2fr; 
+      }
+
+      .item1 { 
+        grid-area: header;
+        text-align: center; 
+        font-size: 36px;
+        font-family: arial;
+        font-weight: 600;
+    }
+    .item3 {
+        margin-top: 2px;
+    }
+    .super{
+        margin-top: 5px;
+        padding-left: 10px;
+        height: 7vh;
+        background-color: rgb(0, 0, 0);
+        color: #080;
+        font-size: 18px;
+        font-family: arial;
+        font-weight: 400;
+    }
+}
