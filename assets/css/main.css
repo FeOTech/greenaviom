@@ -19,18 +19,19 @@
 
 .nav_tag {
     float: left;
+    font-size: 1.3vw;
 }
 
 .nav_tag_line1 {
     margin: 0; 
-    color: #0f0; 
+    color: #0F9200; 
     font-weight: 700;
     letter-spacing: 10px;
 }
 
 .nav_tag_line2 {
     margin: 0; 
-    color: #090; 
+    color: #006203; 
     font-weight: 500;
     letter-spacing: -1px;
 }
@@ -41,36 +42,61 @@
     }
 }
 
+.products {
+    display: flex;
+    justify-content: space-evenly;
+    height: 60vh;
+    background-color: #D9EEE1;
+}
+
+.recyclable, .nonrecyclable {
+    width: 40%;
+    text-align: center;
+}
+
+.recyclable img, .nonrecyclable img {
+    width: 90%;
+    height: 70%;
+    border-radius: 10px;
+}
+
+.recyclable p, .nonrecyclable p {
+    font-size: 5vh;
+    font-weight: 900;
+    color: #282A35;
+    margin-top: 2vh;
+}
+
+
+
 
 .card-deck {
-    margin-left: 1vw;
-    margin-right: 1vw;
+    /* margin-left: 1vw;
+    margin-right: 1vw; */
+    background-color: #fff4a3;
+    padding: 0 1vw 3vh 1vw;
+    margin: 0;
 }
 
 .cards_tag {
-    margin: 30em 2vw 2vh 2vw;
-    padding: 1vh 0 1vh 0;
-    border-radius: 5px;
-    border: 4px solid;
-    background-color: #ffe67c;
+    /* margin: 2vh 2vw 2vh 2vw; */
+    padding: 3vh 0 3vh 0;
+    /* border-radius: 5px; */
+    /* border: 4px solid; */
+    background-color: #fff4a3;
     text-align: center;
-    color: #295f2d;
+    color: #282A35;
 }
 
-
-@media (max-width: 768px) {
-    .cards_tag {
-        margin-top: 60em;
-    }
-}
 
 .card {
     align-items: flex-end;
-    background-color: #4AE54A;
+    /* background-color: #4AE54A; */
+    background-color: #04aa6d;
     color: #fff;
 }
 
-.card:nth-child(2){
+/* .card:nth-child(2){
     background-color: #30CB00;
 }
 
@@ -80,12 +106,20 @@
 
 .card:nth-child(4){
     background-color: #006203;
-}
+} */
 
 
 .card-img {
     height: 40px;
     width: 60px;
+}
+
+.card-title {
+    font-size: 1.75rem;
+}
+
+.card-text {
+    font-size: 1.3rem;
 }
 
 
@@ -200,6 +234,323 @@ right connector from last child*/
 
 
 
+/* ANIMATED RECTANGLE  */
+.anim_rect {
+	position: relative;
+	width: 100%;
+	height: 80vh;
+	/* background-color: #D9EEE1; */
+    background-color: #282A35;
+}
+
+.rect0, .rect1, .rect2, .rect3, .rect4, .rect5, .rect6 {
+	position: absolute;
+	border-radius: 4px;
+	color: #fff;
+	text-align: center;
+	font-size: 1.5vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.rect0, .rect1, .rect2 {
+	width: 20%;
+	height: 20%;
+	top: 10%;
+}
+
+.rect3, .rect4, .rect5, .rect6 {
+	width: 15%;
+	height: 20%;
+	top: 45%;
+}
+
+.rect0{
+	left: 5%;
+	/* background: rgba(0, 100, 0, 0.9); */
+    background-color: #96D4D4;
+	text-align: center;
+	animation-name: animrect0;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+}
+
+.rect1{
+	left: 35%;
+	/* background: rgba(0, 100, 0, 0.9); */
+    background-color: #96D4D4;
+	animation-name: animrect1;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+}
+
+.rect2{
+	left: 65%;
+	/* background: rgba(0, 135, 0, 0.9); */
+    background-color: #96D4D4;
+	animation-name: animrect2;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+}
+
+.rect3{
+	left: 75%;
+	/* background: rgba(0, 165, 0, 0.9); */
+    background-color: #96D4D4;
+	animation-name: animrect3;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+}
+
+.rect4{
+	left: 52.88%;
+	/* background: rgba(0, 195, 0, 0.9); */
+    background-color: #96D4D4;
+	animation-name: animrect4;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+}
+
+.rect5{
+	left: 31.66%;
+	/* background: rgba(0, 225, 0, 0.9); */
+    background-color: #96D4D4;
+	animation-name: animrect5;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+}
+
+.rect6 {
+	left: 10%;
+	/* background: rgba(0, 255, 0, 0.9); */
+    background-color: #96D4D4;
+	animation-name: animrect6;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes animrect0 {
+	0%   {left: 0%; top: 10%;}
+	11.11%   {left: 10%; top: 10%;}
+	22.22%   {left: 10%; top: 10%;}
+	33.33%   {left: 10%; top: 10%;}
+	44.44%   {left: 10%; top: 25%;}
+	55.56%   {left: 10%; top: 25%;}
+	66.67%   {left: 10%; top: 25%;}
+	77.78%   {left: 10%; top: 25%;}
+	88.89%   {left: 10%; top: 25%;}
+	100%   {left: 10%; top: 25%;}
+}
+
+@keyframes animrect1 {
+	0%   {left: 30%; top: 10%;}
+	11.11%   {left: 30%; top: 10%;}
+	22.22%   {left: 40%; top: 10%;}
+	33.33%   {left: 40%; top: 10%;}
+	44.44%   {left: 40%; top: 25%;}
+	55.56%   {left: 40%; top: 25%;}
+	66.67%   {left: 40%; top: 25%;}
+	77.78%   {left: 40%; top: 25%;}
+	88.89%   {left: 40%; top: 25%;}
+	100%   {left: 40%; top: 25%;}
+}
+
+@keyframes animrect2 {
+	0%   {left: 60%; top: 10%;}
+	11.11%   {left: 60%; top: 10%;}
+	22.22%   {left: 60%; top: 10%;}
+	33.33%   {left: 70%; top: 10%;}
+	44.44%   {left: 70%; top: 25%;}
+	55.56%   {left: 70%; top: 25%;}
+	66.67%   {left: 70%; top: 25%;}
+	77.78%   {left: 70%; top: 25%;}
+	88.89%   {left: 70%; top: 25%;}
+	100%   {left: 70%; top: 25%;}
+}
+
+@keyframes animrect3 {
+	0%   {left: 75%; top: 45%;}
+	11.11%   {left: 75%; top: 45%;}
+	22.22%   {left: 75%; top: 45%;}
+	33.33%   {left: 75%; top: 45%;}
+	44.44%   {left: 75%; top: 45%;}
+	55.56%   {left: 75%; top: 60%;}
+	66.67%   {left: 67.88%; top: 60%;}
+	77.78%   {left: 67.88%; top: 60%;}
+	88.89%   {left: 67.88%; top: 60%;}
+	100%   {left: 67.88%; top: 60%;}
+}
+
+@keyframes animrect4 {
+	0%   {left: 52.88%; top: 45%;}
+	11.11%   {left: 52.88%; top: 45%;}
+	22.22%   {left: 52.88%; top: 45%;}
+	33.33%   {left: 52.88%; top: 45%;}
+	44.44%   {left: 52.88%; top: 45%;}
+	55.56%   {left: 52.88%; top: 60%;}
+	66.67%   {left: 52.88%; top: 60%;}
+	77.78%   {left: 46.66%; top: 60%;}
+	88.89%   {left: 46.66%; top: 60%;}
+	100%   {left: 46.66%; top: 60%;}
+}
+
+@keyframes animrect5 {
+	0%   {left: 31.66%; top: 45%;}
+	11.11%   {left: 31.66%; top: 45%;}
+	22.22%   {left: 31.66%; top: 45%;}
+	33.33%   {left: 31.66%; top: 45%;}
+	44.44%   {left: 31.66%; top: 45%;}
+	55.56%   {left: 31.66%; top: 60%;}
+	66.67%   {left: 31.66%; top: 60%;}
+	77.78%   {left: 31.66%; top: 60%;}
+	88.89%   {left: 25%; top: 60%;}
+	100%   {left: 25%; top: 60%;}
+}
+
+@keyframes animrect6 {
+	0%   {left: 10%; top: 45%;}
+	11.11%   {left: 10%; top: 45%;}
+	22.22%   {left: 10%; top: 45%;}
+	33.33%   {left: 10%; top: 45%;}
+	44.44%   {left: 10%; top: 45%;}
+	55.56%   {left: 10%; top: 60%;}
+	66.67%   {left: 10%; top: 60%;}
+	77.78%   {left: 10%; top: 60%;}
+	88.89%   {left: 10%; top: 60%;}
+	100%   {left: 0%; top: 60%;}
+}
+
+
+/* Connection lines  */
+.lineone, .linetwo, .linethree, .linefour, .linefive, .linesix {
+	position: absolute;
+	/* height: 4px; */
+	width: 10%;
+	border-top: 4px dotted #fff;
+}
+
+.lineone {	
+	animation-name: animlineone;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+}
+
+.linetwo {	
+	animation-name: animlinetwo;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+}
+
+.linethree {	
+	transform: rotateZ(90deg);
+	animation-name: animlinethree;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+}
+
+.linefour {	
+	animation-name: animlinefour;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+}
+
+.linefive {	
+	animation-name: animlinefive;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+}
+
+.linesix {	
+	animation-name: animlinesix;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes  animlineone {
+	0%   {left: 20%; top: 17%; width: 10%;}
+	11.11%   {left: 30%; top: 17%;  width: 0%;}
+	22.22%   {left: 30%; top: 17%;  width: 10%;}
+	33.33%   {left: 30%; top: 17%;  width: 10%;}
+	44.44%   {left: 30%; top: 32%;  width: 10%;}
+	55.56%   {left: 30%; top: 32%;  width: 10%;}
+	66.67%   {left: 30%; top: 32%;  width: 10%;}
+	77.78%   {left: 30%; top: 32%;  width: 10%;}
+	88.89%   {left: 30%; top: 32%;  width: 10%;}
+	100%   {left: 30%; top: 32%;  width: 10%;}
+}
+
+@keyframes  animlinetwo {
+	0%   {left: 50%; top: 17%; width: 10%;}
+	11.11%   {left: 50%; top: 17%;  width: 10%;}
+	22.22%   {left: 60%; top: 17%;  width: 0%;}
+	33.33%   {left: 60%; top: 17%;  width: 10%;}
+	44.44%   {left: 60%; top: 32%;  width: 10%;}
+	55.56%   {left: 60%; top: 32%;  width: 10%;}
+	66.67%   {left: 60%; top: 32%;  width: 10%;}
+	77.78%   {left: 60%; top: 32%;  width: 10%;}
+	88.89%   {left: 60%; top: 32%;  width: 10%;}
+	100%   {left: 60%; top: 32%;  width: 10%;}
+}
+
+@keyframes  animlinethree {
+	0%   {left: 75%; top: 34%; width: 12vh;}
+	11.11%   {left: 75%; top: 34%;  width: 12vh;}
+	22.22%   {left: 75%; top: 34%;  width: 12vh;}
+	33.33%   {left: 75%; top: 34%;  width: 12vh;}
+	44.44%   {left: 75%; top: 49%;  width: 0vh;}
+	55.56%   {left: 75%; top: 49%;  width: 12vh;}
+	66.67%   {left: 75%; top: 49%;  width: 12vh;}
+	77.78%   {left: 75%; top: 49%;  width: 12vh;}
+	88.89%   {left: 75%; top: 49%;  width: 12vh;}
+	100%   {left: 75%; top: 49%;  width: 12vh;}
+}
+
+@keyframes  animlinefour {
+	0%   {left: 67.88%; top: 52%; width: 7.12%;}
+	11.11%   {left: 67.88%; top: 52%;  width: 7.12%;}
+	22.22%   {left: 67.88%; top: 52%;  width: 7.12%;}
+	33.33%   {left: 67.88%; top: 52%;  width: 7.12%;}
+	44.44%   {left: 67.88%; top: 52%;  width: 7.12%;}
+	55.56%   {left: 67.88%; top: 67%;  width: 7.12%;}
+	66.67%   {left: 67.88%; top: 67%;  width: 0%;}
+	77.78%   {left: 60.76%; top: 67%;  width: 7.12%;}
+	88.89%   {left: 60.76%; top: 67%;  width: 7.12%;}
+	100%   {left: 60.76%; top: 67%;  width: 7.12%;}
+}
+
+@keyframes  animlinefive {
+	0%   {left: 46.66%; top: 52%; width: 7.12%;}
+	11.11%   {left: 46.66%; top: 52%;  width: 7.12%;}
+	22.22%   {left: 46.66%; top: 52%;  width: 7.12%;}
+	33.33%   {left: 46.66%; top: 52%;  width: 7.12%;}
+	44.44%   {left: 46.66%; top: 52%;  width: 7.12%;}
+	55.56%   {left: 46.66%; top: 67%;  width: 7.12%;}
+	66.67%   {left: 46.66%; top: 67%;  width: 7.12%;}
+	77.78%   {left: 46.66%; top: 67%;  width: 0%;}
+	88.89%   {left: 39.54%; top: 67%;  width: 7.12%;}
+	100%   {left: 39.54%; top: 67%;  width: 7.12%;}
+}
+
+@keyframes  animlinesix {
+	0%   {left: 25%; top: 52%; width: 7.12%;}
+	11.11%   {left: 25%; top: 52%;  width: 7.12%;}
+	22.22%   {left: 25%; top: 52%;  width: 7.12%;}
+	33.33%   {left: 25%; top: 52%;  width: 7.12%;}
+	44.44%   {left: 25%; top: 52%;  width: 7.12%;}
+	55.56%   {left: 25%; top: 67%;  width: 7.12%;}
+	66.67%   {left: 25%; top: 67%;  width: 7.12%;}
+	77.78%   {left: 25%; top: 67%;  width: 7.12%;}
+	88.89%   {left: 25%; top: 67%;  width: 0%;}
+	100%   {left: 14.88%; top: 67%;  width: 10.12%;}
+}
+
+
+
+
+
+
+
 /* FOR CIRCULAR TREE */
 .wrapper {
     padding: 1% 1%;
@@ -244,13 +595,14 @@ right connector from last child*/
 
 /* FOR TREE CHART */
 .tree_chart_tag {
-    margin: 2vh 2vw 2vh 2vw;
-    padding: 1vh 0 1vh 0;
-    border-radius: 5px;
-    border: 4px solid;
-    background-color: #ffe67c;
+    /* margin: 2vh 2vw 2vh 2vw; */
+    padding: 3vh 0 1vh 0;
+    font-size: 3vh;
+    /* border-radius: 5px; */
+    /* border: 4px solid; */
+    background-color: #282A35;
     text-align: center;
-    color: #295f2d;
+    color: #fff;
 }
 
 * {
@@ -281,20 +633,33 @@ right connector from last child*/
 
 .tree_chart {
     width: 100%;
-    max-width: 1142px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
-/* a:focus {
-    outline: 2px dashed #f7f7f7;
-} */
 
 @media all and (max-width: 767px) {
     .tree_chart {
         padding: 0 20px;
     }
 }
+
+.tree_chart_container {
+    height: 40em;
+    background-color: #282A35;
+}
+
+@media all and (max-width: 478px) {
+    .tree_chart_container {
+        height: 66em;
+    }
+}
+
+/* a:focus {
+    outline: 2px dashed #f7f7f7;
+} */
+
+
 
 .tree_chart_ul {
     padding: 0;
@@ -305,13 +670,13 @@ right connector from last child*/
 .tree_chart_ul a {
     display: block;
     background: #ccc;
-    border: 4px solid #000;
+    /* border: 4px solid #000; */
     text-align: center;
     overflow: hidden;
-    font-size: .7em;
+    font-size: 1.3em;
     text-decoration: none;
     font-weight: bold;
-    color: #333;
+    color: #fff;
     height: 70px;
     margin-bottom: -26px;
     box-shadow: 4px 4px 9px -4px rgba(0, 0, 0, 0.4);
@@ -350,7 +715,7 @@ right connector from last child*/
     width: 0;
     height: 130px;
     background: red;
-    border-left: 4px solid #000;
+    border-left: 4px solid #999;
     left: 34.45%;
     position: relative;
 }
@@ -374,8 +739,8 @@ right connector from last child*/
 .subdirector>li:first-child {
     float: right;
     right: 27.2%;
-    border-left: 4px solid #000;
-    border-bottom: 4px solid #000;
+    border-left: 4px solid #999;
+    border-bottom: 4px solid #999;
 }
 
 .departments>li:first-child {
@@ -432,9 +797,9 @@ right connector from last child*/
     position: absolute;
     width: 81.1%;
     height: 22px;
-    border-top: 4px solid #000;
-    border-right: 4px solid #000;
-    border-left: 4px solid #000;
+    border-top: 4px solid #999;
+    border-right: 4px solid #999;
+    border-left: 4px solid #999;
     margin: 0 auto;
     top: 130px;
     left: 11%
@@ -462,7 +827,7 @@ right connector from last child*/
     position: absolute;
     width: 0;
     height: 22px;
-    border-left: 4px solid #000;
+    border-left: 4px solid #999;
     z-index: 1;
     top: -22px;
     left: 48%;
@@ -470,7 +835,7 @@ right connector from last child*/
 }
 
 .department {
-    border-left: 4px solid #000;
+    border-left: 4px solid #999;
     width: 23.6%;
     float: left;
     margin-left: 1.751313485113835%;
@@ -494,7 +859,7 @@ right connector from last child*/
         position: absolute;
         width: 0;
         height: 60px;
-        border-left: 4px solid #000;
+        border-left: 4px solid #999;
         z-index: 1;
         top: -60px;
         left: 0%;
@@ -522,7 +887,7 @@ right connector from last child*/
 
 .department li {
     padding-left: 25px;
-    border-bottom: 4px solid #000;
+    border-bottom: 4px solid #999;
     height: 80px;
 }
 
@@ -579,6 +944,101 @@ right connector from last child*/
 }
 
 
+/* IMAGE GALLERY */
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+    position: relative;
+    max-width: fit-content;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+
+  .mySlides img {
+      height: 70vh;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 10%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+
+
+
+
 
 /* CONTACT US  */
 .item1 { 
@@ -630,7 +1090,8 @@ right connector from last child*/
 /* } */
 
 .box{
-    background-image: linear-gradient(#060,#000);
+    /* background-image: linear-gradient(#060,#000); */
+    background-color: #282A35;
     color: white;
     margin-top: 2vh;
 }
@@ -643,8 +1104,10 @@ right connector from last child*/
     padding-left: 10px;
     padding-top: 1vh;
     height: 5vh;
-    background-color: rgb(0, 0, 0);
-    color: #080;
+    /* background-color: rgb(0, 0, 0);
+    color: #080; */
+    background-color: #282A35;
+    color: #fff;
     font-size: 2vh;
     font-family: arial;
     font-weight: 400;
@@ -691,8 +1154,10 @@ right connector from last child*/
         margin-top: 5px;
         padding-left: 10px;
         height: 7vh;
-        background-color: rgb(0, 0, 0);
-        color: #080;
+        /* background-color: rgb(0, 0, 0);
+        color: #080; */
+        background-color: #282A35;
+        color: #fff;
         font-size: 18px;
         font-family: arial;
         font-weight: 400;
