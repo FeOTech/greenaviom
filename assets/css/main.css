@@ -589,6 +589,10 @@ right connector from last child*/
     .wrapper_phone {
         display: block;
     }
+
+    .anim_rect {
+        display: none;
+    }
 }
 
 
